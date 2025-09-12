@@ -832,12 +832,21 @@ section:nth-child(odd) {
 }
 
 @media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
   .hero h2 {
-    font-size: 32px;
+    font-size: 2.5rem;
   }
 
   .hero p {
-    font-size: 20px;
+    font-size: 1.5rem;
+  }
+
+  .hero img {
+    width: 150px;
+    height: 150px;
   }
 }
 
@@ -2102,67 +2111,89 @@ section:nth-child(odd) {
   }
 }
 
-@media (max-width: 480px) {
-  .profile-img {
-    max-width: 150px;
-    max-height: 150px;
-  }
-  
-  .tools-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
-  
-  .tool-item {
-    padding: 10px;
-  }
-  
-  .tool-item img {
-    width: 35px;
-    height: 35px;
-  }
-  
-  .tool-item span {
-    font-size: 12px;
-  }
-}
-
 /*--------------------------------------------------------------
-# Skills Section Enhancements
+# Responsive Contact Section
 --------------------------------------------------------------*/
-.skills {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+@media (max-width: 767px) {
+  .contact .row.gy-4.justify-content-center {
+    flex-direction: column !important;
+    gap: 20px;
+  }
+  .contact .col-md-4 {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+  .contact .info-item {
+    padding: 25px 10px;
+    border-radius: 16px;
+    font-size: 0.95rem;
+  }
+  .contact .info-item i {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  .contact .info-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+  .contact .info-item p {
+    font-size: 0.95rem;
+  }
+  .contact .linkedin-link {
+    font-size: 0.95rem;
+    padding: 0 2px;
+  }
 }
 
-.skills ul {
-  list-style: none;
-  padding: 0;
-}
+/* Additional Mobile Responsive Styles */
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 0;
+    min-height: 80vh;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+    margin: 15px 0 10px 0;
+  }
 
-.skills ul li {
-  padding: 15px 0;
-  border-bottom: 1px solid rgba(102, 126, 234, 0.1);
-  font-size: 1.1rem;
-  color: var(--default-color);
-  position: relative;
-  padding-left: 30px;
-  transition: all 0.3s ease;
-}
+  .hero h2 {
+    font-size: 2rem;
+  }
 
-.skills ul li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: var(--accent-color);
-  font-weight: bold;
-  font-size: 1.2rem;
-}
+  .hero p {
+    font-size: 1.2rem;
+  }
 
-.skills ul li:hover {
-  color: var(--accent-color);
-  padding-left: 40px;
-}
+  .hero img {
+    width: 120px;
+    height: 120px;
+  }
 
-.skills ul li:last-child {
-  border-bottom: none;
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .portfolio-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  section,
+  .section {
+    padding: 60px 0;
+  }
 }
